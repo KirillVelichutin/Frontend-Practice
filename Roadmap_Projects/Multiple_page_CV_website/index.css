@@ -1,0 +1,41 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar li {
+    float: left;
+    border-right: 2px solid;
+}
+
+.navbar li:last-child {
+    border: none;
+}
+
+.navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 8px;
+}
+
+.logo {
+    width: 30px;
+}
+
+.name {
+    display: inline-block;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.headtext {
+    text-align: center;
+}
