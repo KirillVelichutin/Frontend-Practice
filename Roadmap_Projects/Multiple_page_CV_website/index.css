@@ -86,4 +86,10 @@ aside {
 .reviews > div {
 	border: 2px solid;
 	border-radius: 8px;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+footer {
+	text-align: center;
 }
