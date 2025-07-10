@@ -39,3 +39,51 @@
 .headtext {
     text-align: center;
 }
+
+.projects {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.projects li a {
+	display: block;
+	padding: 10px;
+}
+
+.projects li {
+	border-bottom: 2px solid;
+}
+
+.projects li:last-child {
+	border-bottom: none;
+}
+
+main {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+main > section {
+	border: 2px solid;
+	border-left: none;
+	padding: 15px
+}
+
+.education {
+	border-right: none;
+}
+
+aside {
+	grid-column: 1 / span 3;
+}
+
+.reviews {
+	display: flex;
+	justify-content: space-around;
+}
+
+.reviews > div {
+	border: 2px solid;
+	border-radius: 8px;
+}
