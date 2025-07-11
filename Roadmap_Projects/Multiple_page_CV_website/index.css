@@ -1,15 +1,23 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
 .topbar {
+	margin: 1vw;
     display: flex;
     justify-content: space-between;
 }
 
 .navbar {
+	padding: 0;
     list-style-type: none;
 }
 
 .navbar li {
     float: left;
-    border-right: 2px solid;
+	border-style: solid;
+    border-width: 0px 2px 0px 0px;
 }
 
 .navbar li:last-child {
@@ -37,18 +45,19 @@
 }
 
 .headtext {
+	margin: 3vw;
     text-align: center;
 }
 
 .projects {
 	list-style-type: none;
-	margin: 0;
+	margin: 1vw 0 1vw 0;
 	padding: 0;
 }
 
 .projects li a {
 	display: block;
-	padding: 10px;
+	padding: 0.8vw;
 }
 
 .projects li {
@@ -74,16 +83,26 @@ main > section {
 	border-right: none;
 }
 
+.education-record > * {
+	margin: 0.5vw;
+}
+
+.courses li {
+	margin: 0.3vw 0;
+}
+
 aside {
 	grid-column: 1 / span 3;
+	padding: 1vw;
 }
 
-.reviews {
+.reviews-section {
 	display: flex;
 	justify-content: space-around;
+	padding: 2vw;
 }
 
-.reviews > div {
+.reviews-section > div {
 	border: 2px solid;
 	border-radius: 8px;
 	margin: 1rem;
@@ -92,4 +111,23 @@ aside {
 
 footer {
 	text-align: center;
+}
+
+.experience-section > * {
+	margin: 1vw;
+}
+
+.experience-record > * {
+	margin: 0.7vw 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.topbar {flex-direction: column;}
+	.logo-name {flex-direction: column;}
+
+	.navbar li {float: none; border-width: 2px 2px 0 2px; text-align: center;}
+	.navbar li:last-child {border: 2px solid;}
+
+	main {display: flex; flex-direction: column;}
+	.reviews-section {flex-direction: column;}
 }
