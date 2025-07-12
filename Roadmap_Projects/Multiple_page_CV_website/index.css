@@ -9,15 +9,28 @@
     justify-content: space-between;
 }
 
-.navbar {
-	padding: 0;
-    list-style-type: none;
+
+.text-style {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
+}
+
+.links-style {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	color: #252525;
+}
+
+.links-hover{
+	color: #aeaeae;
+	text-decoration: underline;
 }
 
 .navbar li {
+	list-style: none;
     float: left;
 	border-style: solid;
-    border-width: 0px 2px 0px 0px;
+    border-width: 0px 1px 0px 0px;
 }
 
 .navbar li:last-child {
@@ -28,10 +41,20 @@
     display: block;
     text-decoration: none;
     padding: 6px 8px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	color: #252525;
 }
 
+.navbar li a:hover {
+	color: #aeaeae;
+	text-decoration: underline;
+}
+
+
 .logo {
-    width: 30px;
+    width: 3vw;
+	border-radius: 8px;
 }
 
 .name {
@@ -42,22 +65,32 @@
     display: flex;
     align-items: center;
     gap: 7px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
 }
 
 .headtext {
-	margin: 3vw;
+	padding: 3vw;
     text-align: center;
 }
 
 .projects {
 	list-style-type: none;
-	margin: 1vw 0 1vw 0;
 	padding: 0;
 }
 
 .projects li a {
 	display: block;
-	padding: 0.8vw;
+	padding: 1vw 1.5vw;
+	text-decoration: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 570;
+	color: #252525;
+}
+
+.projects li a:hover {
+	color: #8d8d8d;
+	text-decoration: underline;
 }
 
 .projects li {
@@ -74,9 +107,14 @@ main {
 }
 
 main > section {
-	border: 2px solid;
-	border-left: none;
-	padding: 15px
+	border-style: solid;
+	border-width: 2px 2px 2px 0;
+}
+
+main > section > h2 {
+	padding: 1vw;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
 }
 
 .education {
@@ -84,7 +122,14 @@ main > section {
 }
 
 .education-record > * {
-	margin: 0.5vw;
+	margin: 0.5vw 1.5vw;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
+}
+
+.signature{
+	margin-top: 2vw;
+	color: gray;
 }
 
 .courses li {
@@ -94,6 +139,8 @@ main > section {
 aside {
 	grid-column: 1 / span 3;
 	padding: 1vw;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
 }
 
 .reviews-section {
@@ -109,25 +156,61 @@ aside {
 	padding: 1rem;
 }
 
+
+.reviews-section > div > p:last-of-type {
+	margin-top: 1.5vw;
+	color: gray;
+}
+
 footer {
 	text-align: center;
 }
 
-.experience-section > * {
-	margin: 1vw;
+.experience-section > div {
+	padding: 1.3vw 1.8vw;
+}
+
+.experience-section > div:last-of-type {
+	border-top: 1px solid;
 }
 
 .experience-record > * {
 	margin: 0.7vw 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #252525;
+}
+
+.experience-record > a {
+	text-decoration: none;
+	color: #252525;
+	font-family:'Courier New', Courier, monospace;
+	font-weight: bold;
+}
+
+.experience-record > a:hover {
+	color: #aeaeae;
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
 	.topbar {flex-direction: column;}
 	.logo-name {flex-direction: column;}
 
-	.navbar li {float: none; border-width: 2px 2px 0 2px; text-align: center;}
-	.navbar li:last-child {border: 2px solid;}
+	.navbar {justify-items: center; padding: 3vw;}
 
 	main {display: flex; flex-direction: column;}
+	main > section {border-width: 2px 0 0 0;}
+	main > section > h2 {padding: 2.3vw;text-align: center; border-bottom: 2px solid;}
+	main > section:last-of-type > h2 {border-bottom: 0;}
+	aside > h2 {text-align: center;}
+
+	.logo {width: 10vw;}
+	.headtext {padding-bottom: 7vw;}
+	.projects {text-align: center; background-color: #cfcfcf;}
+	.projects li {padding: 1.3vw;}
+	.experience-record {background-color: #cfcfcf;}
+	.experience-record > * {margin: 2vw;}
+	.education {border-width: 2px 0;}
+	.education-record > * {margin: 3vw 6vw;}
 	.reviews-section {flex-direction: column;}
 }
